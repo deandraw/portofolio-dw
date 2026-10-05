@@ -1,0 +1,463 @@
+/* ============================================================
+   PORTFOLIO ASSISTANT — CHATBOT WIDGET STYLES
+   Uses the same CSS variables as the main site (colors, radius,
+   fonts, transitions) so it blends into the existing design.
+   ============================================================ */
+
+#pa-root {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 5000;
+  font-family: var(--font-main, 'Inter', sans-serif);
+}
+
+/* ---------- Floating toggle button ---------- */
+.pa-toggle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: var(--gradient);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  box-shadow: 0 8px 30px var(--accent-glow);
+  transition: var(--transition);
+  position: relative;
+}
+
+.pa-toggle:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 36px var(--accent-glow);
+}
+
+.pa-toggle .pa-icon-close {
+  display: none;
+}
+
+#pa-root.pa-open .pa-toggle .pa-icon-open {
+  display: none;
+}
+
+#pa-root.pa-open .pa-toggle .pa-icon-close {
+  display: inline-flex;
+}
+
+.pa-ping {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #22c55e;
+  border: 2px solid var(--bg, #080808);
+}
+
+.pa-ping::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: #22c55e;
+  animation: pa-pulse 1.8s ease-out infinite;
+}
+
+@keyframes pa-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+/* ---------- Chat window ---------- */
+.pa-window {
+  position: absolute;
+  right: 0;
+  bottom: 76px;
+  width: 370px;
+  max-width: calc(100vw - 32px);
+  height: 560px;
+  max-height: calc(100vh - 140px);
+  background: rgba(17, 17, 17, 0.92);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius, 16px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform-origin: bottom right;
+  transform: scale(0.92) translateY(12px);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
+}
+
+#pa-root.pa-open .pa-window {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ---------- Header ---------- */
+.pa-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.10), rgba(0, 0, 0, 0));
+  flex-shrink: 0;
+}
+
+.pa-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.pa-header-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.pa-header-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--white);
+  line-height: 1.2;
+}
+
+.pa-header-status {
+  font-size: 0.75rem;
+  color: var(--white-60);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.pa-dot-online {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #22c55e;
+  display: inline-block;
+  box-shadow: 0 0 6px #22c55e;
+}
+
+.pa-close-btn {
+  background: transparent;
+  border: none;
+  color: var(--white-60);
+  cursor: pointer;
+  font-size: 1rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.pa-close-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--white);
+}
+
+/* ---------- Messages ---------- */
+.pa-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) transparent;
+}
+
+.pa-messages::-webkit-scrollbar {
+  width: 5px;
+}
+
+.pa-messages::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+}
+
+.pa-msg-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  max-width: 92%;
+  animation: pa-fade-in 0.25s ease both;
+}
+
+@keyframes pa-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pa-msg-row.pa-bot {
+  align-self: flex-start;
+}
+
+.pa-msg-row.pa-user {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+.pa-msg-avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  color: #fff;
+}
+
+.pa-msg-row.pa-bot .pa-msg-avatar {
+  background: var(--gradient);
+}
+
+.pa-msg-row.pa-user .pa-msg-avatar {
+  background: var(--bg-card2);
+  border: 1px solid var(--border);
+  color: var(--white-60);
+}
+
+.pa-bubble {
+  padding: 10px 13px;
+  border-radius: 14px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--white);
+  word-wrap: break-word;
+}
+
+.pa-msg-row.pa-bot .pa-bubble {
+  background: var(--bg-card2);
+  border: 1px solid var(--border);
+  border-top-left-radius: 4px;
+}
+
+.pa-msg-row.pa-user .pa-bubble {
+  background: var(--gradient);
+  border-top-right-radius: 4px;
+}
+
+.pa-bubble strong {
+  color: var(--white);
+  font-weight: 600;
+}
+
+/* ---------- Action button inside a bot message ---------- */
+.pa-action-btn {
+  margin-top: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: var(--gradient);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.pa-action-btn:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+/* ---------- Quick replies ---------- */
+.pa-quick-replies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0 16px 12px;
+  flex-shrink: 0;
+}
+
+.pa-quick-btn {
+  background: var(--bg-card2);
+  border: 1px solid var(--border);
+  color: var(--white);
+  font-size: 0.76rem;
+  padding: 7px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.pa-quick-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+/* ---------- Typing indicator ---------- */
+.pa-typing {
+  display: flex;
+  gap: 4px;
+  padding: 12px 14px;
+}
+
+.pa-typing span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--white-30);
+  animation: pa-bounce 1.2s infinite ease-in-out;
+}
+
+.pa-typing span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.pa-typing span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes pa-bounce {
+
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+
+  30% {
+    transform: translateY(-5px);
+    opacity: 1;
+  }
+}
+
+/* ---------- Input area ---------- */
+.pa-input-area {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 14px;
+  border-top: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.pa-input {
+  flex: 1;
+  background: var(--bg-card2);
+  border: 1px solid var(--border);
+  color: var(--white);
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-size: 0.85rem;
+  font-family: inherit;
+  outline: none;
+  transition: var(--transition);
+}
+
+.pa-input:focus {
+  border-color: var(--accent);
+}
+
+.pa-input::placeholder {
+  color: var(--white-30);
+}
+
+.pa-send-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  background: var(--gradient);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.pa-send-btn:hover {
+  filter: brightness(1.1);
+}
+
+.pa-send-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ---------- Highlight effect for "View Project" ---------- */
+.pa-highlight-target {
+  animation: pa-highlight-glow 1.8s ease;
+}
+
+@keyframes pa-highlight-glow {
+  0% {
+    box-shadow: 0 0 0 0 var(--accent-glow);
+  }
+
+  30% {
+    box-shadow: 0 0 0 8px var(--accent-glow);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 480px) {
+  #pa-root {
+    right: 16px;
+    bottom: 16px;
+  }
+
+  .pa-window {
+    width: calc(100vw - 24px);
+    height: calc(100vh - 110px);
+    bottom: 72px;
+    right: -8px;
+  }
+
+  .pa-toggle {
+    width: 54px;
+    height: 54px;
+    font-size: 1.25rem;
+  }
+}

@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Deandra Wahyudrian – Web Developer & Information Systems Graduate based in Majalaya, Kabupaten Bandung, Indonesia. Building clean, functional, and modern web experiences." />
+    <link rel="canonical" href="https://portofolio-dw.vercel.app/" />
+    <meta name="theme-color" content="#050505" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://portofolio-dw.vercel.app/" />
+    <meta property="og:title" content="Deandra Wahyudrian | Web Developer" />
+    <meta property="og:description" content="Web Developer and Information Systems graduate (S.Kom) from Bandung. Projects, certificates, and an AI assistant that answers questions about my work." />
+    <meta property="og:image" content="https://portofolio-dw.vercel.app/assets/images/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Deandra Wahyudrian | Web Developer" />
+    <meta name="twitter:image" content="https://portofolio-dw.vercel.app/assets/images/og-image.jpg" />
+    <title>Deandra Wahyudrian | Web Developer</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="chatbot/chatbot.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="editorial.css" />
+</head>
+
+<body>
+
+    <div class="loader" id="loader" aria-hidden="true"><div class="ld-in"><span class="nav-logo ld-logo">DW<span class="dot">.</span></span><span class="ld-name">Deandra Wahyudrian</span></div></div>
+
+    <!-- ============================================================ CURSOR ============================================================ -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- ============================================================ NAVBAR ============================================================ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">DW<span class="dot">.</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#certificates" class="nav-link">Certificates</a></li>
+                <li><a href="#favsong" class="nav-link">Fav Songs</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="#contact" class="nav-cta">Let's talk</a>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ============================================================ HERO ============================================================ -->
+    <section class="hero" id="home">
+        <canvas id="heroCanvas"></canvas>
+        <div class="hero-content">
+            <p class="hero-eyebrow reveal-up">Based in Majalaya, Kabupaten Bandung, Indonesia</p>
+            <h1 class="hero-title reveal-up">
+                Hi, I'm<br />
+                <span class="gradient-text">Deandra</span><br />
+                Wahyudrian
+            </h1>
+            <p class="hero-role reveal-up">Web Developer &amp; Information Systems Graduate</p>
+            <p class="hero-tagline reveal-up">"I build clean, functional, and modern web experiences."</p>
+            <div class="hero-buttons reveal-up">
+                <a href="#projects" class="btn btn-primary">
+                    <span>View Projects</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn btn-ghost">Contact Me</a>
+            </div>
+            <div class="hero-stats reveal-up">
+                <div class="stat"><span class="stat-num">5+</span><span class="stat-label">Years of Study</span></div>
+                <div class="stat-divider"></div>
+                <div class="stat"><span class="stat-num">4</span><span class="stat-label">Projects</span></div>
+                <div class="stat-divider"></div>
+                <div class="stat"><span class="stat-num">7</span><span class="stat-label">Certificates</span></div>
+            </div>
+        </div>
+        <div class="hero-scroll-hint">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ============================================================ ABOUT ============================================================ -->
+    <section class="about section sec-light" id="about">
+        <div class="container">
+            <div class="section-label reveal-up">About Me</div>
+            <div class="pf" id="profile">
+                <figure class="pf-media" data-cursor="ABOUT|DEANDRA">
+                    <i class="pf-line pf-h pf-h1"></i><i class="pf-line pf-h pf-h2"></i><i class="pf-line pf-v pf-v1"></i><i class="pf-line pf-v pf-v2"></i>
+                    <div class="pf-tilt"><div class="pf-mask"><div class="pf-par"><img class="pf-img" src="assets/images/profile.jpg" alt="Deandra Wahyudrian" /></div></div></div>
+                    <span class="pf-float f1"><b>01</b>WEB</span><span class="pf-float f2"><b>02</b>DESIGN</span><span class="pf-float f3"><b>03</b>DATA</span>
+                </figure>
+                <div class="pf-body">
+                    <h2 class="pf-name"><span class="ln"><span>Deandra</span></span><span class="ln"><span>Wahyudrian</span></span></h2>
+                    <div class="pf-roles"><span class="on">Web Developer</span><span>Information Systems Graduate</span></div>
+                    <p class="pf-loc">Majalaya, Kab. Bandung / Indonesia</p>
+                    <ol class="pf-meta"><li style="--i:0"><i>01 /</i>Web Development<u></u></li><li style="--i:1"><i>02 /</i>UI/UX<u></u></li><li style="--i:2"><i>03 /</i>Database<u></u></li><li style="--i:3"><i>04 /</i>Data<u></u></li></ol>
+                    <p class="about-desc">Fresh graduate in <strong>Information Systems (S.Kom)</strong> from Universitas Komputer Indonesia, GPA 3.12, interested in software engineering, web development, and public and online services.</p>
+                    <p class="about-desc">I build web applications with HTML, CSS, JavaScript, and PHP, including system design, UI/UX, and CRUD features. Open to opportunities as a Software Engineer or in administration.</p>
+                    <div class="about-contact-links">
+                        <a href="mailto:deandrawahyudrian15@gmail.com" class="about-link"><i
+                                class="fa-solid fa-envelope"></i> deandrawahyudrian15@gmail.com</a>
+                        <a href="tel:+6289715814240" class="about-link"><i class="fa-solid fa-phone"></i>
+                            0897-1581-424</a>
+                        <a href="https://linkedin.com/in/deandra-wahyudrian" target="_blank" class="about-link"><i
+                                class="fa-brands fa-linkedin"></i> linkedin.com/in/deandra-wahyudrian</a>
+                    </div>
+                    <p class="pf-avail"><span class="pf-dot"></span>Available for opportunities</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ SKILLS ============================================================ -->
+    <section class="skills section" id="skills">
+        <div class="container">
+            <div class="section-label reveal-up">What I Know</div>
+            <h2 class="section-title text-center reveal-up">Skills &amp; <span class="gradient-text">Expertise</span>
+            </h2>
+            <p class="section-subtitle reveal-up">A toolkit built through real projects and continuous learning.</p>
+
+            <div class="skills-grid">
+                <!-- Hard Skills -->
+                <div class="skills-group reveal-up">
+                    <h3 class="skills-group-title"><i class="fa-solid fa-code"></i> Hard Skills</h3>
+                    <div class="skill-cards">
+                        <div class="skill-card" data-skill="HTML">
+                            <div class="skill-icon"><i class="fa-brands fa-html5"></i></div>
+                            <span>HTML</span>
+                        </div>
+                        <div class="skill-card" data-skill="CSS">
+                            <div class="skill-icon"><i class="fa-brands fa-css3-alt"></i></div>
+                            <span>CSS</span>
+                        </div>
+                        <div class="skill-card" data-skill="JavaScript">
+                            <div class="skill-icon"><i class="fa-brands fa-js"></i></div>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-card" data-skill="PHP">
+                            <div class="skill-icon"><i class="fa-brands fa-php"></i></div>
+                            <span>PHP</span>
+                        </div>
+                        <div class="skill-card" data-skill="Figma">
+                            <div class="skill-icon"><i class="fa-brands fa-figma"></i></div>
+                            <span>Figma</span>
+                        </div>
+                        <div class="skill-card" data-skill="Canva">
+                            <div class="skill-icon"><i class="fa-solid fa-palette"></i></div>
+                            <span>Canva</span>
+                        </div>
+                        <div class="skill-card" data-skill="MS Office">
+                            <div class="skill-icon"><i class="fa-solid fa-file-word"></i></div>
+                            <span>MS Office</span>
+                        </div>
+                        <div class="skill-card" data-skill="Data Entry">
+                            <div class="skill-icon"><i class="fa-solid fa-keyboard"></i></div>
+                            <span>Data Entry</span>
+                        </div>
+                        <div class="skill-card" data-skill="MySQL">
+                            <div class="skill-icon"><i class="fa-solid fa-database"></i></div>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="skill-card" data-skill="XAMPP">
+                            <div class="skill-icon"><i class="fa-solid fa-server"></i></div>
+                            <span>XAMPP</span>
+                        </div>
+                        <div class="skill-card" data-skill="Laragon">
+                            <div class="skill-icon"><i class="fa-solid fa-layer-group"></i></div>
+                            <span>Laragon</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Tools -->
+                <div class="skills-group ai reveal-up">
+                    <h3 class="skills-group-title"><i class="fa-solid fa-wand-magic-sparkles"></i> AI Tools I Use</h3>
+                    <div class="skill-cards">
+                        <div class="skill-card" data-skill="Claude">
+                            <div class="skill-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                            <span>Claude</span>
+                        </div>
+                        <div class="skill-card" data-skill="ChatGPT">
+                            <div class="skill-icon"><i class="fa-solid fa-comments"></i></div>
+                            <span>ChatGPT</span>
+                        </div>
+                        <div class="skill-card" data-skill="Codex">
+                            <div class="skill-icon"><i class="fa-solid fa-terminal"></i></div>
+                            <span>Codex</span>
+                        </div>
+                        <div class="skill-card" data-skill="Antigravity">
+                            <div class="skill-icon"><i class="fa-solid fa-rocket"></i></div>
+                            <span>Antigravity</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="skills-group reveal-up">
+                    <h3 class="skills-group-title"><i class="fa-solid fa-brain"></i> Soft Skills</h3>
+                    <div class="soft-skill-list">
+                        <div class="soft-skill-item">
+                            <div class="soft-icon"><i class="fa-solid fa-users"></i></div>
+                            <div>
+                                <span class="soft-name">Teamwork</span>
+                                <div class="soft-bar">
+                                    <div class="soft-fill" style="--w:90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="soft-skill-item">
+                            <div class="soft-icon"><i class="fa-solid fa-comments"></i></div>
+                            <div>
+                                <span class="soft-name">Communication</span>
+                                <div class="soft-bar">
+                                    <div class="soft-fill" style="--w:85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="soft-skill-item">
+                            <div class="soft-icon"><i class="fa-solid fa-shuffle"></i></div>
+                            <div>
+                                <span class="soft-name">Adaptability</span>
+                                <div class="soft-bar">
+                                    <div class="soft-fill" style="--w:88%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="soft-skill-item">
+                            <div class="soft-icon"><i class="fa-solid fa-clock"></i></div>
+                            <div>
+                                <span class="soft-name">Time Management</span>
+                                <div class="soft-bar">
+                                    <div class="soft-fill" style="--w:82%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="soft-skill-item">
+                            <div class="soft-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                            <div>
+                                <span class="soft-name">Attention to Detail</span>
+                                <div class="soft-bar">
+                                    <div class="soft-fill" style="--w:92%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ PROJECTS ============================================================ -->
+    <section class="projects section sec-light" id="projects">
+        <div class="container">
+            <div class="section-label reveal-up">My Work</div>
+            <h2 class="section-title text-center reveal-up">Featured <span class="gradient-text">Projects</span></h2>
+            <p class="section-subtitle reveal-up">A selection of projects I've built and contributed to.</p>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card reveal-up" id="project-jabotrip">
+                    <div class="project-image">
+                        <img src="assets/images/jabotrip.png" alt="JaboTrip – Travel & Tourism Website"
+                            loading="lazy" />
+                        <div class="project-overlay">
+                            <a href="#" class="btn btn-primary btn-sm">View Project <i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">Figma</span>
+                        </div>
+                        <h3 class="project-title">JaboTrip</h3>
+                        <p class="project-desc">Travel &amp; Tourism Website featuring a stunning hero section, travel
+                            schedules, and promotional sections. Contributed UI/UX design using Figma and front-end
+                            implementation.</p>
+                        <div class="project-footer">
+                            <a href="#" class="project-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+                            <a href="https://github.com/deandraw" target="_blank" class="project-link-ghost"><i
+                                    class="fa-brands fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card reveal-up" id="project-toko-v1">
+                    <div class="project-image">
+                        <img src="assets/images/toko-sepeda-v1.jpg" alt="Toko Sepeda Sentosa V1"
+                            loading="lazy" />
+                        <div class="project-overlay">
+                            <a href="#" class="btn btn-primary btn-sm">View Project <i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">PHP</span>
+                        </div>
+                        <h3 class="project-title">Toko Sepeda Sentosa V1</h3>
+                        <p class="project-desc">An operational information system for Toko Sepeda Sentosa, designed to manage sales, purchasing, inventory, returns, suppliers, customers, reporting, and activity auditing in one integrated system.</p>
+                        <div class="project-footer">
+                            <a href="#" class="project-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+                            <a href="https://github.com/deandraw/toko-sepeda-sentosav1" target="_blank" class="project-link-ghost"><i
+                                    class="fa-brands fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card reveal-up" id="project-toko">
+                    <div class="project-image">
+                        <img src="assets/images/toko-sepeda.png" alt="Toko Sepeda Sentosa – E-commerce Website"
+                            loading="lazy" />
+                        <div class="project-overlay">
+                            <a href="#" class="btn btn-primary btn-sm">View Project <i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">PHP</span>
+                        </div>
+                        <h3 class="project-title">Toko Sepeda Sentosa</h3>
+                        <p class="project-desc">E-commerce bicycle shop featuring a product catalog, shopping cart, and
+                            full CRUD product management. Built with PHP backend for dynamic content management.</p>
+                        <div class="project-footer">
+                            <a href="#" class="project-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+                            <a href="https://github.com/deandraw" target="_blank" class="project-link-ghost"><i
+                                    class="fa-brands fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card reveal-up" id="project-toko-v2">
+                    <div class="project-image">
+                        <img src="assets/images/toko-sepeda2.png" alt="Toko Sepeda Sentosa V2.0" loading="lazy"
+                            style="filter: hue-rotate(30deg);" />
+                        <!-- slight color shift to differentiate if using same pic -->
+                        <div class="project-overlay">
+                            <a href="https://toko-sepeda-sentosa.vercel.app/" target="_blank"
+                                class="btn btn-primary btn-sm">View V2.0 <i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">Next.js</span> <!-- Best guess on latest tech -->
+                            <span class="project-tag">Tailwind CSS</span>
+                            <span class="project-tag">React</span>
+                        </div>
+                        <h3 class="project-title">Toko Sepeda Sentosa v2.0</h3>
+                        <p class="project-desc">A modernized upgrade of the bicycle e-commerce platform. Fully
+                            redesigned frontend highlighting responsiveness and premium user experience.</p>
+                        <div class="project-footer">
+                            <a href="https://toko-sepeda-sentosa.vercel.app/" target="_blank" class="project-link">View
+                                Project <i class="fa-solid fa-arrow-right"></i></a>
+                            <a href="https://github.com/deandraw/toko-sepeda-v2" target="_blank"
+                                class="project-link-ghost"><i class="fa-brands fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ EXPERIENCE ============================================================ -->
+    <section class="experience section" id="experience">
+        <div class="container">
+            <div class="section-label reveal-up">My Journey</div>
+            <h2 class="section-title reveal-up">Experience &amp; <span class="gradient-text">Involvement</span></h2>
+
+            <div class="timeline">
+                <div class="timeline-item reveal-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header"><div>
+                            <span class="timeline-type">Education / Jan 2021 - Sep 2026</span>
+                            <h3 class="timeline-role">Bachelor of Information Systems (S.Kom)</h3>
+                            <p class="timeline-org">Universitas Komputer Indonesia (UNIKOM)</p></div>
+                            <div class="timeline-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                        </div>
+                        <ul class="timeline-tasks"><li><i class="fa-solid fa-check"></i> GPA 3.12 / 4.00</li><li><i class="fa-solid fa-check"></i> Final project: Toko Sepeda Sentosa V1 information system</li><li><i class="fa-solid fa-check"></i> Before that: SMAN 1 Majalaya, Social Sciences</li></ul>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header"><div>
+                            <span class="timeline-type">Internship / Jul - Aug 2024</span>
+                            <h3 class="timeline-role">Administration Intern</h3>
+                            <p class="timeline-org">UPTD Pajak Daerah Wilayah III Baleendah</p></div>
+                            <div class="timeline-icon"><i class="fa-solid fa-building-columns"></i></div>
+                        </div>
+                        <ul class="timeline-tasks"><li><i class="fa-solid fa-check"></i> Entered and verified regional tax data in an internal administration system</li><li><i class="fa-solid fa-check"></i> Helped prepare monthly regional revenue reports</li><li><i class="fa-solid fa-check"></i> Supported public service and office operations</li></ul>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header"><div>
+                            <span class="timeline-type volunteer">Volunteer / Mar 2023</span>
+                            <h3 class="timeline-role">Volunteer</h3>
+                            <p class="timeline-org">Green Pop Festival, The Matic Mall</p></div>
+                            <div class="timeline-icon"><i class="fa-solid fa-ticket"></i></div>
+                        </div>
+                        <ul class="timeline-tasks"><li><i class="fa-solid fa-check"></i> Served 1,000+ visitors in ticket verification and event entry</li><li><i class="fa-solid fa-check"></i> Coordinated with the event team at the entrance area</li><li><i class="fa-solid fa-check"></i> Helped visitors with fast, friendly, and informative service</li></ul>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header"><div>
+                            <span class="timeline-type">Organization / May 2016 - Jan 2018</span>
+                            <h3 class="timeline-role">Member</h3>
+                            <p class="timeline-org">CAFS Basketball Club, Majalaya</p></div>
+                            <div class="timeline-icon"><i class="fa-solid fa-basketball"></i></div>
+                        </div>
+                        <ul class="timeline-tasks"><li><i class="fa-solid fa-check"></i> Took part in regular training and local matches</li><li><i class="fa-solid fa-check"></i> Built teamwork, sportsmanship, and leadership</li></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="certs section sec-light" id="certificates">
+        <div class="container">
+            <div class="section-label reveal-up">Credentials</div>
+            <h2 class="section-title reveal-up">Certificates</h2>
+            <ul class="cert-list">
+                <li class="reveal-up"><div class="cert"><span class="cert-y">Aug 2026</span><div><h3 class="cert-t">Gemini Certified Student (University)</h3><span class="cert-i">Google for Education</span></div><p class="cert-d">Knowledge, skills, and basic competencies for using Google AI. Valid through Aug 2029.</p><button type="button" class="cert-img" data-zoom="assets/certificates/gemini-student-1.jpg" data-cap="Gemini Certified Student (University)" data-cursor="ZOOM" aria-label="View certificate: Gemini Certified Student (University)"><img src="assets/certificates/gemini-student-thumb.jpg" alt="Gemini Certified Student (University)" loading="lazy"></button></div></li>
+                <li class="reveal-up"><div class="cert"><span class="cert-y">Jun 2026</span><div><h3 class="cert-t">Digital Entrepreneur Class Practitioner</h3><span class="cert-i">Digital Marketing School</span></div><p class="cert-d">Program held 11 May to 19 Jun 2026: digital business model, marketing strategy, landing page development, social media, and content creation.</p><button type="button" class="cert-img" data-zoom="assets/certificates/dec-practitioner-1.jpg|assets/certificates/dec-practitioner-2.jpg" data-cap="Digital Entrepreneur Class Practitioner" data-cursor="ZOOM" data-n="2 PAGES" aria-label="View certificate: Digital Entrepreneur Class Practitioner"><img src="assets/certificates/dec-practitioner-thumb.jpg" alt="Digital Entrepreneur Class Practitioner" loading="lazy"></button></div></li>
+                <li class="reveal-up"><div class="cert"><span class="cert-y">May 2026</span><div><h3 class="cert-t">TOEFL ITP, Score 437</h3><span class="cert-i">UNIKOM Language Center</span></div><p class="cert-d">Listening 45, Structure and Written Expression 43, Reading 43. Valid until May 2028.</p><button type="button" class="cert-img" data-zoom="assets/certificates/toefl-itp-1.jpg" data-cap="TOEFL ITP, Score 437" data-cursor="ZOOM" aria-label="View certificate: TOEFL ITP, Score 437"><img src="assets/certificates/toefl-itp-thumb.jpg" alt="TOEFL ITP, Score 437" loading="lazy"></button></div></li>
+                <li class="reveal-up"><div class="cert"><span class="cert-y">Dec 2024</span><div><h3 class="cert-t">Junior Web Developer (Pengembang Web Pratama)</h3><span class="cert-i">BNSP / LSP Media Informatika</span></div><p class="cert-d">Certificate of Competence in Programming and Software Development (Ujikom). Six competency units, including user interface and structured programming. Valid for 3 years.</p><button type="button" class="cert-img" data-zoom="assets/certificates/bnsp-web-1.jpg|assets/certificates/bnsp-web-2.jpg" data-cap="Junior Web Developer (Pengembang Web Pratama)" data-cursor="ZOOM" data-n="2 PAGES" aria-label="View certificate: Junior Web Developer (Pengembang Web Pratama)"><img src="assets/certificates/bnsp-web-thumb.jpg" alt="Junior Web Developer (Pengembang Web Pratama)" loading="lazy"></button></div></li>
+                <li class="reveal-up"><div class="cert"><span class="cert-y">Aug 2023</span><div><h3 class="cert-t">CCNAv7: Switching, Routing, and Wireless Essentials</h3><span class="cert-i">Cisco Networking Academy</span></div><p class="cert-d">Completed through the Cisco Networking Academy program.</p><button type="button" class="cert-img" data-zoom="assets/certificates/ccna-2-1.jpg" data-cap="CCNAv7: Switching, Routing, and Wireless Essentials" data-cursor="ZOOM" aria-label="View certificate: CCNAv7: Switching, Routing, and Wireless Essentials"><img src="assets/certificates/ccna-2-thumb.jpg" alt="CCNAv7: Switching, Routing, and Wireless Essentials" loading="lazy"></button></div></li>
+                <li class="reveal-up"><div class="cert"><span class="cert-y">Feb 2023</span><div><h3 class="cert-t">CCNAv7: Introduction to Networks</h3><span class="cert-i">Cisco Networking Academy</span></div><p class="cert-d">Completed through the Cisco Networking Academy program.</p><button type="button" class="cert-img" data-zoom="assets/certificates/ccna-1-1.jpg" data-cap="CCNAv7: Introduction to Networks" data-cursor="ZOOM" aria-label="View certificate: CCNAv7: Introduction to Networks"><img src="assets/certificates/ccna-1-thumb.jpg" alt="CCNAv7: Introduction to Networks" loading="lazy"></button></div></li>
+                <li class="reveal-up"><div class="cert"><span class="cert-y">Apr 2022</span><div><h3 class="cert-t">Character Building, Participant</h3><span class="cert-i">HIMASI UNIKOM</span></div><p class="cert-d">Activity of the Information Systems Student Association, Universitas Komputer Indonesia.</p><button type="button" class="cert-img" data-zoom="assets/certificates/character-building-1.jpg" data-cap="Character Building, Participant" data-cursor="ZOOM" aria-label="View certificate: Character Building, Participant"><img src="assets/certificates/character-building-thumb.jpg" alt="Character Building, Participant" loading="lazy"></button></div></li>
+            </ul>
+        </div>
+    </section>
+
+
+    <!-- ============================================================ MY FAV SONG SHOWCASE ============================================================ -->
+    <section class="favsong-showcase" id="favsong">
+        <!-- Background Canvas -->
+        <canvas id="starsCanvas" class="bg-canvas"></canvas>
+
+        <div class="showcase-header">
+            <h2 class="showcase-title reveal-up">MY FAV SONG</h2>
+        </div>
+
+        <div class="showcase-main">
+            <!-- Grid of covers (injected by JS) -->
+            <div class="showcase-grid" id="showcaseGrid">
+                <!-- Cover format:
+                <div class="sc-cover-item [main|grid-item]">
+                   <img src="...">
+                </div>
+                -->
+            </div>
+
+            <div class="showcase-player-area" id="playerArea">
+                <!-- Lyrics Area -->
+                <div class="sc-lyrics-container" id="lyricsContainer">
+                    <div class="sc-lyrics-scroll" id="lyricsScroll">
+                        <p class="sc-lyric-line active">Pilih lagu untuk memulai...</p>
+                    </div>
+                </div>
+
+                <!-- Web Audio Visualizer (Spectrum) -->
+                <canvas id="spectrumCanvas" class="spectrum-canvas"></canvas>
+
+                <!-- Audio Controls -->
+                <div class="sc-controls-container">
+                    <div class="sc-progress-wrapper">
+                        <span class="sc-time" id="scTimeCurrent">0:00</span>
+                        <div class="sc-scrubber-bg" id="scScrubberBg">
+                            <input type="range" class="sc-scrubber" id="scScrubber" min="0" max="100" value="0"
+                                step="0.1">
+                            <div class="sc-scrubber-fill" id="scScrubberFill"></div>
+                        </div>
+                        <span class="sc-time" id="scTimeDuration">0:00</span>
+                    </div>
+
+                    <div class="sc-buttons">
+                        <div class="sc-song-info">
+                            <h3 id="scSongTitle">Song Title</h3>
+                            <p id="scSongArtist">Artist Name</p>
+                        </div>
+
+                        <div class="sc-actions">
+                            <button class="sc-btn" id="scPrev" aria-label="Previous Song"><i
+                                    class="fa-solid fa-backward-step"></i></button>
+                            <button class="sc-btn sc-play" id="scPlay" aria-label="Play/Pause"><i
+                                    class="fa-solid fa-play" id="scPlayIcon"></i></button>
+                            <button class="sc-btn" id="scNext" aria-label="Next Song"><i
+                                    class="fa-solid fa-forward-step"></i></button>
+                        </div>
+                        <div class="sc-extra"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Native Audio (Hidden) -->
+        <audio id="audioPlayer" crossorigin="anonymous" src=""></audio>
+    </section>
+
+
+    <!-- ============================================================ CONTACT ============================================================ -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="section-label reveal-up">Get In Touch</div>
+            <h2 class="section-title text-center reveal-up">Let's <span class="gradient-text">Connect</span></h2>
+            <p class="section-subtitle reveal-up">Have a project in mind or just want to say hi? My inbox is always
+                open.</p>
+
+            <div class="contact-grid">
+                <!-- Info -->
+                <div class="contact-info reveal-left">
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
+                            <span class="contact-label">Email</span>
+                            <a href="mailto:deandrawahyudrian15@gmail.com"
+                                class="contact-value">deandrawahyudrian15@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <span class="contact-label">Phone</span>
+                            <a href="tel:+6289715814240" class="contact-value">0897-1581-424</a>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fa-brands fa-linkedin"></i></div>
+                        <div>
+                            <span class="contact-label">LinkedIn</span>
+                            <a href="https://linkedin.com/in/deandra-wahyudrian" target="_blank"
+                                class="contact-value">deandra-wahyudrian</a>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fa-brands fa-github"></i></div>
+                        <div>
+                            <span class="contact-label">GitHub</span>
+                            <a href="https://github.com/deandraw" target="_blank" class="contact-value">@deandraw</a>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <span class="contact-label">Location</span>
+                            <span class="contact-value">Majalaya, Kabupaten Bandung, Indonesia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <form class="contact-form reveal-right" id="contactForm" novalidate>
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="john@example.com" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-full" id="submitBtn">
+                        <span>Send Message</span>
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                    <div class="form-success" id="formSuccess">
+                        <i class="fa-solid fa-circle-check"></i> Message sent successfully! I'll get back to you soon.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ FOOTER ============================================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="nav-logo">DW<span class="dot">.</span></span>
+                    <p>Web Developer & Information Systems Graduate based in Majalaya, Kabupaten Bandung, Indonesia.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-nav">
+                        <h4>Navigation</h4>
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#skills">Skills</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#experience">Experience</a>
+                        <a href="#certificates">Certificates</a>
+                        <a href="#favsong">Fav Songs</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    <div class="footer-social-col">
+                        <h4>Socials</h4>
+                        <a href="https://github.com/deandraw" target="_blank"><i class="fa-brands fa-github"></i>
+                            GitHub</a>
+                        <a href="https://linkedin.com/in/deandra-wahyudrian" target="_blank"><i
+                                class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                        <a href="mailto:deandrawahyudrian15@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Deandra Wahyudrian. All rights reserved.</p>
+                <div class="footer-socials">
+                    <a href="https://github.com/deandraw" target="_blank" aria-label="GitHub"><i
+                            class="fa-brands fa-github"></i></a>
+                    <a href="https://linkedin.com/in/deandra-wahyudrian" target="_blank" aria-label="LinkedIn"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="mailto:deandrawahyudrian15@gmail.com" aria-label="Email"><i
+                            class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="main.js"></script>
+    <script src="editorial.js" defer></script>
+
+    <!-- ============================================================ AI PORTFOLIO ASSISTANT ============================================================ -->
+    <script src="chatbot/chatbot-engine.js"></script>
+    <script src="chatbot/chatbot-widget.js"></script>
+</body>
+
+</html>

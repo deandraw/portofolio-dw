@@ -1,0 +1,486 @@
+{
+  "name": "Deandra Wahyudrian",
+  "role": {
+    "en": "Web Developer & Information Systems Graduate",
+    "id": "Web Developer & Lulusan Sarjana Sistem Informasi"
+  },
+  "location": "Majalaya, Kabupaten Bandung, Indonesia",
+  "bio": {
+    "en": "Fresh graduate in Information Systems (S.Kom) from Universitas Komputer Indonesia, GPA 3.12, interested in software engineering, web development, and public and online services. Builds web applications with HTML, CSS, JavaScript, and PHP, including system design, UI/UX, and CRUD features. Open to opportunities as a Software Engineer or in administration.",
+    "id": "Fresh graduate Sarjana Sistem Informasi (S.Kom) dari Universitas Komputer Indonesia, IPK 3,12, dengan ketertarikan di software engineering, pengembangan web, serta pelayanan publik maupun online. Berpengalaman membangun aplikasi web dengan HTML, CSS, JavaScript, dan PHP, termasuk merancang sistem, UI/UX, dan fitur CRUD. Terbuka untuk peluang sebagai Software Engineer maupun di bidang administrasi."
+  },
+  "focusAreas": [
+    "Web Development",
+    "UI/UX Design",
+    "Database",
+    "Data Analysis"
+  ],
+  "skills": {
+    "hard": [
+      "Data Entry",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "PHP",
+      "MySQL",
+      "SQL",
+      "Tailwind CSS",
+      "Bootstrap",
+      "UI/UX Design",
+      "Figma",
+      "Database Management",
+      "Data Analysis",
+      "SPSS",
+      "Git/GitHub",
+      "Canva",
+      "MS Office",
+      "XAMPP",
+      "Laragon"
+    ],
+    "soft": [
+      "Teamwork",
+      "Communication",
+      "Adaptability",
+      "Time Management",
+      "Attention to Detail"
+    ]
+  },
+  "tools": [
+    "Visual Studio Code",
+    "XAMPP",
+    "Laragon",
+    "phpMyAdmin",
+    "Figma",
+    "SPSS",
+    "GitHub",
+    "Canva",
+    "MS Office"
+  ],
+  "projects": [
+    {
+      "id": "toko-sepeda-v1",
+      "anchorId": "project-toko-v1",
+      "name": "Toko Sepeda Sentosa V1",
+      "category": {
+        "en": "Information System / Full-Stack Web Application",
+        "id": "Sistem Informasi / Aplikasi Web Full-Stack"
+      },
+      "tags": [
+        "PHP",
+        "MySQL",
+        "JavaScript",
+        "Chart.js",
+        "HTML",
+        "CSS"
+      ],
+      "keywords": [
+        "bicycle",
+        "sentosa",
+        "v1",
+        "information system",
+        "sistem informasi",
+        "penjualan",
+        "sales",
+        "pembelian",
+        "purchasing",
+        "retur",
+        "return",
+        "stok",
+        "stock",
+        "inventory",
+        "supplier",
+        "pelanggan",
+        "customer",
+        "laporan",
+        "report",
+        "excel",
+        "dashboard",
+        "chart",
+        "audit",
+        "log aktivitas",
+        "role",
+        "owner",
+        "pemilik",
+        "karyawan",
+        "employee",
+        "kasir",
+        "skripsi",
+        "thesis",
+        "full-stack",
+        "fullstack",
+        "transaksi",
+        "thesis",
+        "final project",
+        "tugas akhir",
+        "unikom",
+        "latest",
+        "terbaru",
+        "toko sepeda v1",
+        "sentosa v1",
+        "sistem informasi toko sepeda"
+      ],
+      "description": {
+        "en": "An operational information system for Toko Sepeda Sentosa, designed to manage sales, purchasing, inventory, returns, suppliers, customers, reporting, and activity auditing in one integrated system.",
+        "id": "Sistem informasi operasional untuk Toko Sepeda Sentosa, dirancang untuk mengelola penjualan, pembelian, stok, retur, supplier, pelanggan, pelaporan, dan audit aktivitas dalam satu sistem terpadu."
+      },
+      "url": null,
+      "family": "Toko Sepeda Sentosa",
+      "version": "V1",
+      "featured": true,
+      "versionNote": {
+        "en": "Information system",
+        "id": "Sistem informasi"
+      },
+      "features": {
+        "en": [
+          "Sales transactions",
+          "Purchasing from suppliers",
+          "Sales & purchase returns",
+          "Stock with product variants",
+          "Suppliers & customers",
+          "Reports with Excel export",
+          "Dashboard charts",
+          "Activity log / audit trail",
+          "Owner & employee roles",
+          "Store pickup / delivery"
+        ],
+        "id": [
+          "Transaksi penjualan",
+          "Pembelian ke supplier",
+          "Retur penjualan & pembelian",
+          "Stok dengan varian produk",
+          "Supplier & pelanggan",
+          "Laporan dengan export Excel",
+          "Grafik dashboard",
+          "Log aktivitas / audit trail",
+          "Peran pemilik & karyawan",
+          "Ambil di toko / diantar"
+        ]
+      },
+      "image": "assets/images/toko-sepeda-v1.jpg",
+      "github": "https://github.com/deandraw/toko-sepeda-sentosav1",
+      "badge": {
+        "en": "Final project, UNIKOM 2026",
+        "id": "Tugas akhir, UNIKOM 2026"
+      }
+    },
+    {
+      "id": "toko-sepeda-v2",
+      "anchorId": "project-toko-v2",
+      "name": "Toko Sepeda Sentosa v2.0",
+      "category": {
+        "en": "Full-stack / E-commerce (Redesign)",
+        "id": "Full-stack / E-commerce (Redesign)"
+      },
+      "tags": [
+        "React",
+        "Next.js",
+        "Tailwind CSS"
+      ],
+      "keywords": [
+        "e-commerce",
+        "ecommerce",
+        "modern",
+        "next.js",
+        "online store",
+        "react",
+        "redesign",
+        "responsive",
+        "sentosa",
+        "sentosabike",
+        "tailwind",
+        "toko online",
+        "toko sepeda",
+        "v2",
+        "v2.0",
+        "vercel"
+      ],
+      "description": {
+        "en": "A modernized redesign of the bicycle e-commerce platform, with a fully rebuilt frontend focused on responsiveness and a premium user experience.",
+        "id": "Pembaruan modern dari platform e-commerce toko sepeda, dengan frontend yang dibangun ulang, berfokus pada responsivitas dan pengalaman pengguna yang lebih baik."
+      },
+      "url": "https://toko-sepeda-sentosa.vercel.app/",
+      "family": "Toko Sepeda Sentosa",
+      "version": "V2",
+      "versionNote": {
+        "en": "Redesign",
+        "id": "Redesign"
+      },
+      "image": "assets/images/toko-sepeda2.png",
+      "github": "https://github.com/deandraw/toko-sepeda-v2"
+    },
+    {
+      "id": "toko-sepeda",
+      "anchorId": "project-toko",
+      "name": "Toko Sepeda Sentosa",
+      "category": {
+        "en": "Full-stack / E-commerce",
+        "id": "Full-stack / E-commerce"
+      },
+      "tags": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "PHP",
+        "MySQL"
+      ],
+      "keywords": [
+        "ecommerce",
+        "e-commerce",
+        "online store",
+        "online shop",
+        "toko online",
+        "jual beli",
+        "shop",
+        "toko",
+        "inventory",
+        "stok",
+        "stock",
+        "cart",
+        "keranjang",
+        "checkout",
+        "transaksi",
+        "product management",
+        "manajemen produk",
+        "admin dashboard",
+        "dashboard"
+      ],
+      "description": {
+        "en": "A web-based information system for a bicycle shop, with product/stock/category management, transactions, a shopping cart, and an admin dashboard. Built with PHP and MySQL.",
+        "id": "Sistem informasi berbasis web untuk toko sepeda, dengan manajemen produk, stok, kategori, transaksi, keranjang belanja, dan dashboard admin. Dibangun menggunakan PHP dan MySQL."
+      },
+      "url": null,
+      "image": "assets/images/toko-sepeda.png"
+    },
+    {
+      "id": "jabotrip",
+      "anchorId": "project-jabotrip",
+      "name": "JaboTrip",
+      "category": {
+        "en": "UI/UX & Frontend",
+        "id": "UI/UX & Frontend"
+      },
+      "tags": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Figma"
+      ],
+      "keywords": [
+        "travel",
+        "tourism",
+        "trip",
+        "wisata",
+        "perjalanan",
+        "jalan-jalan",
+        "landing page",
+        "ui/ux",
+        "ui",
+        "ux",
+        "design",
+        "desain",
+        "tampilan",
+        "figma"
+      ],
+      "description": {
+        "en": "A travel & tourism information website for the Jabodetabek area, featuring a hero section, travel schedules, and promotional sections. Deandra contributed the UI/UX design in Figma and the front-end implementation.",
+        "id": "Website informasi dan layanan perjalanan untuk wilayah Jabodetabek, dengan hero section, jadwal perjalanan, dan bagian promosi. Deandra berkontribusi pada desain UI/UX di Figma serta implementasi front-end."
+      },
+      "url": null,
+      "image": "assets/images/jabotrip.png",
+      "badge": {
+        "en": "Group project, 2024",
+        "id": "Proyek kelompok, 2024"
+      }
+    },
+    {
+      "id": "toko-elektronik",
+      "anchorId": "project-elektronik",
+      "name": "Website Toko Elektronik",
+      "category": {
+        "en": "Admin & CRUD system",
+        "id": "Admin & CRUD system"
+      },
+      "tags": [
+        "PHP",
+        "MySQL"
+      ],
+      "keywords": [
+        "electronics",
+        "elektronik",
+        "crud",
+        "admin",
+        "inventory",
+        "stok",
+        "manajemen produk",
+        "database",
+        "upload gambar",
+        "image upload"
+      ],
+      "description": {
+        "en": "An admin and product management website for an electronics store, with full CRUD for products, categories, pricing, image uploads, and database handling.",
+        "id": "Website admin dan manajemen produk untuk toko elektronik, dengan fitur CRUD produk, kategori, harga, upload gambar, dan pengelolaan database."
+      },
+      "url": null
+    }
+  ],
+  "experience": [
+    {
+      "role": "Administration Intern",
+      "org": "UPTD Pajak Daerah Wilayah III Baleendah",
+      "type": "Internship",
+      "period": "Jul - Aug 2024"
+    },
+    {
+      "role": "Volunteer",
+      "org": "Green Pop Festival, The Matic Mall",
+      "type": "Volunteer",
+      "period": "Mar 2023"
+    },
+    {
+      "role": "Member",
+      "org": "CAFS Basketball Club, Majalaya",
+      "type": "Organization",
+      "period": "May 2016 - Jan 2018"
+    }
+  ],
+  "services": {
+    "en": [
+      "Landing pages & company profile websites",
+      "Web-based information systems (PHP & MySQL)",
+      "Admin dashboards & CRUD systems",
+      "UI/UX design in Figma",
+      "Database design & data analysis"
+    ],
+    "id": [
+      "Landing page & website company profile",
+      "Sistem informasi berbasis web (PHP & MySQL)",
+      "Dashboard admin & sistem CRUD",
+      "Desain UI/UX di Figma",
+      "Perancangan database & analisis data"
+    ]
+  },
+  "contact": {
+    "email": "deandrawahyudrian15@gmail.com",
+    "phone": "0897-1581-424",
+    "linkedin": "https://linkedin.com/in/deandra-wahyudrian",
+    "github": "https://github.com/deandraw"
+  },
+  "openTo": [
+    "Software Engineer",
+    "Administration"
+  ],
+  "education": [
+    {
+      "school": "Universitas Komputer Indonesia (UNIKOM)",
+      "degree": {
+        "en": "Bachelor of Information Systems (S.Kom)",
+        "id": "Sarjana Sistem Informasi (S.Kom)"
+      },
+      "period": "Jan 2021 - Sep 2026",
+      "gpa": "3.12 / 4.00"
+    },
+    {
+      "school": "SMAN 1 Majalaya",
+      "degree": {
+        "en": "Senior High School (Social Sciences)",
+        "id": "SMA (IPS)"
+      },
+      "period": ""
+    }
+  ],
+  "certificates": [
+    {
+      "id": "gemini-student",
+      "title": "Gemini Certified Student (University)",
+      "issuer": "Google for Education",
+      "date": "Aug 2026",
+      "year": "2026",
+      "detail": "Knowledge, skills, and basic competencies for using Google AI. Valid through Aug 2029.",
+      "images": [
+        "assets/certificates/gemini-student-1.jpg"
+      ],
+      "thumb": "assets/certificates/gemini-student-thumb.jpg"
+    },
+    {
+      "id": "dec-practitioner",
+      "title": "Digital Entrepreneur Class Practitioner",
+      "issuer": "Digital Marketing School",
+      "date": "Jun 2026",
+      "year": "2026",
+      "detail": "Program held 11 May to 19 Jun 2026: digital business model, marketing strategy, landing page development, social media, and content creation.",
+      "images": [
+        "assets/certificates/dec-practitioner-1.jpg",
+        "assets/certificates/dec-practitioner-2.jpg"
+      ],
+      "thumb": "assets/certificates/dec-practitioner-thumb.jpg"
+    },
+    {
+      "id": "toefl-itp",
+      "title": "TOEFL ITP, Score 437",
+      "issuer": "UNIKOM Language Center",
+      "date": "May 2026",
+      "year": "2026",
+      "detail": "Listening 45, Structure and Written Expression 43, Reading 43. Valid until May 2028.",
+      "images": [
+        "assets/certificates/toefl-itp-1.jpg"
+      ],
+      "thumb": "assets/certificates/toefl-itp-thumb.jpg"
+    },
+    {
+      "id": "bnsp-web",
+      "title": "Junior Web Developer (Pengembang Web Pratama)",
+      "issuer": "BNSP / LSP Media Informatika",
+      "date": "Dec 2024",
+      "year": "2024",
+      "detail": "Certificate of Competence in Programming and Software Development (Ujikom). Six competency units, including user interface and structured programming. Valid for 3 years.",
+      "images": [
+        "assets/certificates/bnsp-web-1.jpg",
+        "assets/certificates/bnsp-web-2.jpg"
+      ],
+      "thumb": "assets/certificates/bnsp-web-thumb.jpg"
+    },
+    {
+      "id": "ccna-2",
+      "title": "CCNAv7: Switching, Routing, and Wireless Essentials",
+      "issuer": "Cisco Networking Academy",
+      "date": "Aug 2023",
+      "year": "2023",
+      "detail": "Completed through the Cisco Networking Academy program.",
+      "images": [
+        "assets/certificates/ccna-2-1.jpg"
+      ],
+      "thumb": "assets/certificates/ccna-2-thumb.jpg"
+    },
+    {
+      "id": "ccna-1",
+      "title": "CCNAv7: Introduction to Networks",
+      "issuer": "Cisco Networking Academy",
+      "date": "Feb 2023",
+      "year": "2023",
+      "detail": "Completed through the Cisco Networking Academy program.",
+      "images": [
+        "assets/certificates/ccna-1-1.jpg"
+      ],
+      "thumb": "assets/certificates/ccna-1-thumb.jpg"
+    },
+    {
+      "id": "character-building",
+      "title": "Character Building, Participant",
+      "issuer": "HIMASI UNIKOM",
+      "date": "Apr 2022",
+      "year": "2022",
+      "detail": "Activity of the Information Systems Student Association, Universitas Komputer Indonesia.",
+      "images": [
+        "assets/certificates/character-building-1.jpg"
+      ],
+      "thumb": "assets/certificates/character-building-thumb.jpg"
+    }
+  ],
+  "aiTools": [
+    "Claude",
+    "ChatGPT",
+    "Codex",
+    "Antigravity"
+  ]
+}
