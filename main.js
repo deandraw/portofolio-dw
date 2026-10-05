@@ -327,9 +327,12 @@ if (form) {
             form.reset();
             flash(formSuccess, null, 6000);
         } catch (err) {
-            flash(formError, err.message === '429'
+            const code = /^\d{3}$/.test(err.message) ? err.message : 'network';
+            flash(formError, code === '429'
                 ? 'Too many messages in a short time. Please try again later.'
-                : 'Sorry, your message could not be sent. Please email me directly at deandrawahyudrian15@gmail.com.', 8000);
+                : code === '400'
+                    ? 'Please check your name, email, and message, then try again.'
+                    : `Sorry, your message could not be sent (error ${code}). Please email me directly at deandrawahyudrian15@gmail.com.`, 8000);
         } finally {
             clearTimeout(timer);
             btnSpan.textContent = 'Send Message';
@@ -448,10 +451,10 @@ window.addEventListener('load', () => {
             lrcFile: "assets/lyrics/firasat.lrc"
         },
         {
-            title: "None Of Ur Friends Business", artist: "Ginuwine",
-            cover: "assets/music/ab67616d0000b273c3271cf84b2d68263ac5e00d.jpg",
-            audioFile: "assets/audio/none-of-ur-friends.mp3",
-            lrcFile: "assets/lyrics/none-of-ur-friends.lrc"
+            title: "Snap Out of It", artist: "Arctic Monkeys",
+            cover: "assets/music/snap-out-of-it.jpg",
+            audioFile: "assets/audio/snap-out-of-it.mp3",
+            lrcFile: "assets/lyrics/snap-out-of-it.lrc"
         },
         {
             title: "Incomplete", artist: "SisQó",
@@ -466,10 +469,10 @@ window.addEventListener('load', () => {
             lrcFile: "assets/lyrics/kiss-of-life.lrc"
         },
         {
-            title: "Can't Hold Us", artist: "Macklemore & Ryan Lewis",
-            cover: "assets/music/ab67616d00001e022a6b364528b128a4a17d100d.jpg",
-            audioFile: "assets/audio/cant-hold-us.mp3",
-            lrcFile: "assets/lyrics/cant-hold-us.lrc"
+            title: "505", artist: "Arctic Monkeys",
+            cover: "assets/music/505.jpg",
+            audioFile: "assets/audio/505.mp3",
+            lrcFile: "assets/lyrics/505.lrc"
         },
         {
             title: "Let Me Love You", artist: "Mario",
@@ -490,28 +493,28 @@ window.addEventListener('load', () => {
             lrcFile: "assets/lyrics/creep.lrc"
         },
         {
-            title: "The Man Who Can't Be Moved", artist: "The Script",
-            cover: "assets/music/The-Script-English-2008-500x500.jpg",
-            audioFile: "assets/audio/the-man-who-cant-be-moved.mp3",
-            lrcFile: "assets/lyrics/the-man-who-cant-be-moved.lrc"
+            title: "R U Mine?", artist: "Arctic Monkeys",
+            cover: "assets/music/r-u-mine.jpg",
+            audioFile: "assets/audio/r-u-mine.mp3",
+            lrcFile: "assets/lyrics/r-u-mine.lrc"
         },
         {
-            title: "How Deep Is Your Love", artist: "Bee Gees",
-            cover: "assets/music/ab67616d0000b27352038992fc6d7868f31d23b7.jpg",
-            audioFile: "assets/audio/how-deep-is-your-love.mp3",
-            lrcFile: "assets/lyrics/how-deep-is-your-love.lrc"
+            title: "Why'd You Only Call Me When You're High?", artist: "Arctic Monkeys",
+            cover: "assets/music/whyd-you-only-call-me-when-youre-high.jpg",
+            audioFile: "assets/audio/whyd-you-only-call-me-when-youre-high.mp3",
+            lrcFile: "assets/lyrics/whyd-you-only-call-me-when-youre-high.lrc"
         },
         {
-            title: "Fair Trade", artist: "Drake",
-            cover: "assets/music/ab67616d0000b273cd945b4e3de57edd28481a3f.jpg",
-            audioFile: "assets/audio/fair-trade.mp3",
-            lrcFile: "assets/lyrics/fair-trade.lrc"
+            title: "I Wanna Be Yours", artist: "Arctic Monkeys",
+            cover: "assets/music/i-wanna-be-yours.jpg",
+            audioFile: "assets/audio/i-wanna-be-yours.mp3",
+            lrcFile: "assets/lyrics/i-wanna-be-yours.lrc"
         },
         {
-            title: "Tarot", artist: "Feast",
-            cover: "assets/music/ab67616d0000b273c800b90e2092a5328f699117.jpg",
-            audioFile: "assets/audio/tarot.mp3",
-            lrcFile: "assets/lyrics/tarot.lrc"
+            title: "Do I Wanna Know?", artist: "Arctic Monkeys",
+            cover: "assets/music/do-i-wanna-know.jpg",
+            audioFile: "assets/audio/do-i-wanna-know.mp3",
+            lrcFile: "assets/lyrics/do-i-wanna-know.lrc"
         },
         {
             title: "Those Eyes", artist: "New West",
@@ -726,6 +729,7 @@ window.addEventListener('load', () => {
         }
 
         // Encode each part of the URI so spaces and special chars work without breaking the folder slashes
+        audio.dataset.broken = '';
         audio.src = encodePath(song.audioFile);
         
         try {
@@ -742,6 +746,8 @@ window.addEventListener('load', () => {
             lyricsScroll.innerHTML = '<p class="sc-lyric-line active">♪ Instrumental / Lirik tidak tersedia</p>';
         }
 
+        if (audio.dataset.broken) showAudioMissing();
+
         if (autoplay) {
             if (!visualizerInitialized) initAudioVisualizer();
             if (audioCtx && audioCtx.state === 'suspended') audioCtx.resume();
@@ -754,6 +760,16 @@ window.addEventListener('load', () => {
             });
         }
     }
+
+    function showAudioMissing() {
+        lyricsScroll.innerHTML = '<p class="sc-lyric-line active">♪ Audio untuk lagu ini belum tersedia</p>';
+        updatePlayState(false);
+    }
+    audio.addEventListener('error', () => {
+        if (!audio.getAttribute('src')) return;
+        audio.dataset.broken = '1';
+        showAudioMissing();
+    });
 
     function parseLRC(lrcText) {
         const lines = lrcText.split('\n');

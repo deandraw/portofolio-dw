@@ -57,7 +57,7 @@ module.exports = async (req, res) => {
     const name = oneLine(clean(b.name, 80));
     const email = oneLine(clean(b.email, 120));
     const message = clean(b.message, 2000);
-    if (!name || message.length < 5 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    if (!name || message.length < 2 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       res.status(400).json({ error: 'Invalid input' });
       return;
     }

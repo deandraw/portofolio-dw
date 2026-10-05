@@ -2,7 +2,7 @@
 
 Personal portfolio of Deandra Wahyudrian, Web Developer and Information Systems graduate (S.Kom) from Bandung, Indonesia.
 
-Live: https://portofolio-dw.vercel.app
+Live: https://portofolio-dw-two.vercel.app
 
 ## What is inside
 
