@@ -286,29 +286,56 @@ const formSuccess = document.getElementById('formSuccess');
 const submitBtn = document.getElementById('submitBtn');
 
 if (form) {
-    form.addEventListener('submit', (e) => {
+    const formError = document.getElementById('formError');
+    const flash = (el, msg, ms) => {
+        const t = el.querySelector('span');
+        if (msg && t) t.textContent = msg;
+        el.classList.add('show');
+        setTimeout(() => el.classList.remove('show'), ms);
+    };
+    form.addEventListener('submit', async (e) => {
         e.preventDefault();
         const name = form.querySelector('#name').value.trim();
         const email = form.querySelector('#email').value.trim();
         const message = form.querySelector('#message').value.trim();
+        const website = form.querySelector('#website').value;
 
+        formSuccess.classList.remove('show');
+        formError.classList.remove('show');
         if (!name || !email || !message) return;
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            flash(formError, 'Please enter a valid email address.', 5000);
+            return;
+        }
 
-        // Simulate sending
         const btnSpan = submitBtn.querySelector('span');
         const btnIcon = submitBtn.querySelector('i');
         btnSpan.textContent = 'Sending...';
         btnIcon.className = 'fa-solid fa-spinner fa-spin';
         submitBtn.disabled = true;
 
-        setTimeout(() => {
+        const ctrl = new AbortController();
+        const timer = setTimeout(() => ctrl.abort(), 15000);
+        try {
+            const res = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, email, message, website }),
+                signal: ctrl.signal
+            });
+            if (!res.ok) throw new Error(String(res.status));
+            form.reset();
+            flash(formSuccess, null, 6000);
+        } catch (err) {
+            flash(formError, err.message === '429'
+                ? 'Too many messages in a short time. Please try again later.'
+                : 'Sorry, your message could not be sent. Please email me directly at deandrawahyudrian15@gmail.com.', 8000);
+        } finally {
+            clearTimeout(timer);
             btnSpan.textContent = 'Send Message';
             btnIcon.className = 'fa-solid fa-paper-plane';
             submitBtn.disabled = false;
-            form.reset();
-            formSuccess.classList.add('show');
-            setTimeout(() => formSuccess.classList.remove('show'), 5000);
-        }, 1800);
+        }
     });
 }
 

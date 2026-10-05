@@ -195,19 +195,19 @@
                     <h3 class="skills-group-title"><i class="fa-solid fa-wand-magic-sparkles"></i> AI Tools I Use</h3>
                     <div class="skill-cards">
                         <div class="skill-card" data-skill="Claude">
-                            <div class="skill-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                            <div class="skill-icon"><span class="ai-logo has-color"><img class="mono" src="assets/icons/claude.svg" alt="" width="26" height="26" loading="lazy" /><img class="color" src="assets/icons/claude-color.svg" alt="" width="26" height="26" loading="lazy" /></span></div>
                             <span>Claude</span>
                         </div>
                         <div class="skill-card" data-skill="ChatGPT">
-                            <div class="skill-icon"><i class="fa-solid fa-comments"></i></div>
+                            <div class="skill-icon"><span class="ai-logo"><img class="mono" src="assets/icons/openai.svg" alt="" width="26" height="26" loading="lazy" /></span></div>
                             <span>ChatGPT</span>
                         </div>
                         <div class="skill-card" data-skill="Codex">
-                            <div class="skill-icon"><i class="fa-solid fa-terminal"></i></div>
+                            <div class="skill-icon"><span class="ai-logo has-color"><img class="mono" src="assets/icons/codex.svg" alt="" width="26" height="26" loading="lazy" /><img class="color" src="assets/icons/codex-color.svg" alt="" width="26" height="26" loading="lazy" /></span></div>
                             <span>Codex</span>
                         </div>
                         <div class="skill-card" data-skill="Antigravity">
-                            <div class="skill-icon"><i class="fa-solid fa-rocket"></i></div>
+                            <div class="skill-icon"><span class="ai-logo has-color"><img class="mono" src="assets/icons/antigravity.svg" alt="" width="26" height="26" loading="lazy" /><img class="color" src="assets/icons/antigravity-color.svg" alt="" width="26" height="26" loading="lazy" /></span></div>
                             <span>Antigravity</span>
                         </div>
                     </div>
@@ -601,12 +601,16 @@
                         <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."
                             required></textarea>
                     </div>
+                    <input type="text" id="website" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
                     <button type="submit" class="btn btn-primary w-full" id="submitBtn">
                         <span>Send Message</span>
                         <i class="fa-solid fa-paper-plane"></i>
                     </button>
                     <div class="form-success" id="formSuccess">
                         <i class="fa-solid fa-circle-check"></i> Message sent successfully! I'll get back to you soon.
+                    </div>
+                    <div class="form-error" id="formError" role="alert">
+                        <i class="fa-solid fa-circle-exclamation"></i> <span></span>
                     </div>
                 </form>
             </div>

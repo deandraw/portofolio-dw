@@ -34,6 +34,8 @@ vercel dev
 
 Import the repository in Vercel (framework preset: Other, no build command). To enable the Claude-powered assistant, add the environment variable `ANTHROPIC_API_KEY` in Project Settings, Environment Variables, then redeploy. See `.env.example`. Never commit the key.
 
+The contact form (`api/contact.js`) emails messages to your inbox through [Resend](https://resend.com). Add `RESEND_API_KEY` (and optionally `CONTACT_TO_EMAIL`) the same way. On Resend's free plan without a verified domain, emails can only go to the address used to sign up.
+
 ## Featured project
 
 Toko Sepeda Sentosa V1 — an operational information system for a bicycle shop: https://github.com/deandraw/toko-sepeda-sentosav1
